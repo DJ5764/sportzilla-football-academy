@@ -28,7 +28,7 @@ body{
     position:absolute;
     top:0;left:0;
     width:100%;height:100%;
-    background:rgba(0,0,0,0.25); /* very light overlay */
+    background:rgba(0,0,0,0.20);
 }
 
 .hero-content{
@@ -53,9 +53,9 @@ body{
     font-weight:500;
 }
 
-/* SECTION */
+/* SECTIONS */
 section{
-    padding:70px 20px;
+    padding:80px 20px;
     text-align:center;
 }
 
@@ -69,63 +69,84 @@ section{
 .gallery img{
     width:100%;
     height:auto;
-    border-radius:12px;
+    border-radius:14px;
 }
 
 /* VIDEO */
 video{
     width:100%;
-    max-width:800px;
-    margin-top:30px;
-    border-radius:12px;
+    max-width:850px;
+    margin-top:40px;
+    border-radius:14px;
 }
 
 /* COACH */
-.coach-img{
-    width:260px;
-    height:260px;
-    border-radius:50%;
-    object-fit:cover;
-    object-position:center 20%;
-    border:4px solid #1e9e57;
+.coach-section{
+    padding-top:120px;
 }
 
-/* CONTACT */
-.contact-box{
-    background:#f7f7f7;
-    padding:40px;
-    border-radius:12px;
-    max-width:600px;
+.coach-img{
+    width:280px;
+    height:280px;
+    border-radius:50%;
+    object-fit:cover;
+    object-position:center 25%;
+    border:5px solid #1e9e57;
+    margin-top:40px;
+}
+
+/* VISIT US PREMIUM */
+.visit-section{
+    background:#f9fafb;
+}
+
+.visit-card{
+    background:white;
+    padding:50px 30px;
+    border-radius:18px;
+    max-width:700px;
     margin:auto;
+    box-shadow:0 15px 40px rgba(0,0,0,0.08);
+}
+
+.visit-card p{
+    font-size:18px;
+    margin:12px 0;
 }
 
 .btn{
     display:inline-block;
-    padding:12px 25px;
+    padding:14px 28px;
     background:#1e9e57;
     color:white;
     text-decoration:none;
-    border-radius:30px;
-    margin:10px;
-    font-weight:bold;
+    border-radius:40px;
+    margin:12px 10px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#158c48;
 }
 
 /* MAP */
 .map-container{
-    margin-top:40px;
+    margin-top:50px;
 }
 
 iframe{
     width:100%;
-    height:350px;
+    height:380px;
     border:0;
-    border-radius:12px;
+    border-radius:18px;
 }
 
+/* FOOTER */
 footer{
     background:#111;
     color:white;
-    padding:20px;
+    padding:25px;
     text-align:center;
     font-size:14px;
 }
@@ -133,6 +154,10 @@ footer{
 @media(max-width:768px){
     .hero h1{
         font-size:28px;
+    }
+    .coach-img{
+        width:240px;
+        height:240px;
     }
 }
 </style>
@@ -144,7 +169,7 @@ footer{
     <div class="hero-content">
         <img src="IMG-20260221-WA0017.jpg" class="logo">
         <h1>Sportzilla Football Academy</h1>
-        <p>Train Hard. Play Smart. Rise Higher.</p>
+        <p>Train Hard. Play Smart. Win Big.</p>
     </div>
 </div>
 
@@ -180,23 +205,23 @@ match exposure and competitive growth.
 </video>
 </section>
 
-<section>
+<section class="coach-section">
 <h2>Head Coach</h2>
 <img src="IMG-20260222-WA0000.jpg" class="coach-img">
 <h3>Sudhir Kumar Dhusia</h3>
 <p>Founder & Head Coach</p>
 </section>
 
-<section>
+<section class="visit-section">
 <h2>Visit Us</h2>
 
-<div class="contact-box">
-<p><strong>Location:</strong> Kondhwe Dhawade, Pune, Maharashtra</p>
-<p><strong>Phone:</strong> +91 96119 58268</p>
+<div class="visit-card">
+<p><strong>📍 Location:</strong> Kondhwe Dhawade, Pune, Maharashtra</p>
+<p><strong>📞 Phone:</strong> +91 96119 58268</p>
 
 <a href="tel:+919611958268" class="btn">Call Now</a>
 <a href="https://wa.me/919611958268" class="btn">WhatsApp</a>
-<a href="https://www.google.com/maps/search/?api=1&query=Sportzilla+Football+Academy+Pune" 
+<a href="https://www.google.com/maps/search/?api=1&query=Sportzilla+Football+Academy+Pune"
    target="_blank" class="btn">Get Directions</a>
 </div>
 
