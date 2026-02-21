@@ -1,218 +1,163 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sportzilla Football Academy</title>
+    <title>Sportzilla Football Academy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-body{
-    margin:0;
-    font-family: Arial, sans-serif;
-    background:#f4f4f4;
-}
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
 
-/* HERO */
-header{
-    background:url('IMG-20260221-WA0015.jpg') center/cover no-repeat;
-    color:white;
-    text-align:center;
-    padding:120px 20px;
-    position:relative;
-}
+        /* HERO SECTION */
+        .hero {
+            background: url('IMG-20260221-WA0015.jpg') center/contain no-repeat;
+            background-color: #000;
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
 
-header::before{
-    content:"";
-    position:absolute;
-    top:0;
-    left:0;
-    right:0;
-    bottom:0;
-    background:rgba(0,0,0,0.6);
-}
+        .hero h1 {
+            font-size: 40px;
+            margin: 10px 0;
+            text-shadow: 2px 2px 6px black;
+        }
 
-header *{
-    position:relative;
-    z-index:1;
-}
+        .hero p {
+            font-size: 20px;
+            text-shadow: 1px 1px 5px black;
+        }
 
-.logo{
-    width:120px;
-    margin-bottom:20px;
-}
+        /* LOGO */
+        .logo {
+            width: 120px;
+            margin-bottom: 10px;
+        }
 
-header h1{
-    font-size:40px;
-    margin:10px 0;
-}
+        /* SECTION */
+        section {
+            padding: 40px 20px;
+        }
 
-.slogan{
-    font-size:26px;
-    font-weight:bold;
-    letter-spacing:1px;
-}
+        /* GALLERY */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
 
-.btn{
-    background:#00c853;
-    padding:12px 25px;
-    color:white;
-    text-decoration:none;
-    border-radius:5px;
-    display:inline-block;
-    margin-top:20px;
-}
+        .gallery img {
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+        }
 
-/* SECTIONS */
-section{
-    padding:60px 20px;
-    text-align:center;
-}
+        /* COACH */
+        .coach-img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: top;
+            border: 6px solid #00b33c;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
 
-h2{
-    font-size:32px;
-    margin-bottom:20px;
-}
+        /* BUTTONS */
+        .btn {
+            background: #00b33c;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 10px;
+            font-size: 16px;
+        }
 
-/* PROGRAMS */
-.programs div{
-    background:white;
-    padding:20px;
-    margin:10px auto;
-    border-radius:10px;
-    box-shadow:0 4px 8px rgba(0,0,0,0.1);
-    max-width:350px;
-}
+        footer {
+            background: black;
+            color: white;
+            padding: 15px;
+        }
 
-/* GALLERY */
-.gallery-container{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:15px;
-}
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 28px;
+            }
 
-.gallery-container img{
-    width:300px;
-    height:220px;
-    object-fit:cover;
-    border-radius:10px;
-}
+            .hero {
+                height: 75vh;
+                background-size: contain;
+            }
 
-/* COACH */
-.coach-section{
-    margin-top:20px;
-}
-
-.coach-photo{
-    width:240px;
-    height:240px;
-    border-radius:50%;
-    object-fit:cover;
-    object-position: center 15%;
-    border:6px solid #00c853;
-    box-shadow:0 6px 20px rgba(0,0,0,0.25);
-}
-
-/* CONTACT */
-.contact-buttons a{
-    display:inline-block;
-    margin:10px;
-    padding:12px 25px;
-    background:#00c853;
-    color:white;
-    text-decoration:none;
-    border-radius:6px;
-}
-
-/* FOOTER */
-footer{
-    background:black;
-    color:white;
-    padding:20px;
-    text-align:center;
-}
-
-</style>
+            .gallery img {
+                width: 90%;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<!-- HERO -->
-<header>
-    <img src="IMG-20260221-WA0017.jpg" class="logo">
-    <h1>Sportzilla Football Academy</h1>
-    <p class="slogan">Train Hard. Play Smart. Win Big.</p>
-    <a href="#contact" class="btn">Enroll Now</a>
-</header>
-
-<!-- ABOUT -->
-<section>
-    <h2>About Us</h2>
-    <p>
-    Based in Pune, Sportzilla Football Academy provides professional football coaching 
-    for kids and adults. Established in 2021, we focus on skill development, 
-    match exposure and competitive growth.
-    </p>
-</section>
-
-<!-- PROGRAMS -->
-<section>
-    <h2>Our Programs</h2>
-    <div class="programs">
-        <div>Under 8 Development Batch</div>
-        <div>Under 12 Competitive Batch</div>
-        <div>Under 16 Elite Training</div>
-        <div>Adult Fitness & League Training</div>
+    <!-- HERO -->
+    <div class="hero">
+        <img src="IMG-20260221-WA0017.jpg" class="logo">
+        <h1>Sportzilla Football Academy</h1>
+        <p>Train Hard. Play Smart. Rise Higher.</p>
     </div>
-</section>
 
-<!-- ACHIEVEMENTS -->
-<section>
-    <h2>Our Achievements 🏆</h2>
-    <p>Multiple Tournament Wins | District Level Champions | 50+ Trophies Won</p>
-</section>
+    <!-- ABOUT -->
+    <section>
+        <h2>About Us</h2>
+        <p>
+            Based in Pune, Sportzilla Football Academy provides professional football coaching 
+            for kids and adults. Established in 2021, we focus on skill development, match exposure, 
+            and competitive growth.
+        </p>
+    </section>
 
-<!-- GALLERY -->
-<section>
-    <h2>Gallery</h2>
-    <div class="gallery-container">
-        <img src="IMG-20260221-WA0003.jpg">
-        <img src="IMG-20260221-WA0004.jpg">
-        <img src="IMG-20260221-WA0005.jpg">
-        <img src="IMG-20260221-WA0006.jpg">
-        <img src="IMG-20260221-WA0007.jpg">
-        <img src="IMG-20260221-WA0008.jpg">
-        <img src="IMG-20260221-WA0009.jpg">
-        <img src="IMG-20260221-WA0010.jpg">
-        <img src="IMG-20260221-WA0011.jpg">
-        <img src="IMG-20260221-WA0012.jpg">
-    </div>
-</section>
+    <!-- GALLERY -->
+    <section>
+        <h2>Gallery</h2>
+        <div class="gallery">
+            <img src="IMG-20260221-WA0015.jpg">
+            <img src="IMG-20260221-WA0003.jpg">
+            <img src="IMG-20260221-WA0004.jpg">
+            <img src="IMG-20260221-WA0005.jpg">
+            <img src="IMG-20260221-WA0006.jpg">
+        </div>
+    </section>
 
-<!-- HEAD COACH -->
-<section>
-    <h2>Head Coach</h2>
-    <div class="coach-section">
-        <img src="IMG-20260222-WA0000.jpg" alt="Head Coach" class="coach-photo">
+    <!-- HEAD COACH -->
+    <section>
+        <h2>Head Coach</h2>
+        <img src="IMG-20260222-WA0000.jpg" class="coach-img">
         <h3>Sudhir Kumar Dhusia</h3>
         <p>Founder & Head Coach</p>
-    </div>
-</section>
+    </section>
 
-<!-- CONTACT -->
-<section id="contact">
-    <h2>Contact Us</h2>
-    <p>Kondhwe Dhawade, Pune, Maharashtra</p>
-    <p>Phone: +91 96119 58268</p>
+    <!-- CONTACT -->
+    <section>
+        <h2>Contact Us</h2>
+        <p>Kondhwe Dhawade, Pune, Maharashtra</p>
+        <p>Phone: +91 96119 58268</p>
 
-    <div class="contact-buttons">
-        <a href="tel:+919611958268">Call Now</a>
-        <a href="https://wa.me/919611958268" target="_blank">WhatsApp</a>
-    </div>
-</section>
+        <a href="tel:+919611958268" class="btn">Call Now</a>
+        <a href="https://wa.me/919611958268" class="btn">WhatsApp</a>
+    </section>
 
-<footer>
-    © 2026 Sportzilla Football Academy | Est. 2021
-</footer>
+    <footer>
+        © 2026 Sportzilla Football Academy | Est. 2021
+    </footer>
 
 </body>
 </html>
