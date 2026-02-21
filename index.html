@@ -81,27 +81,26 @@ video{
     border-radius:16px;
 }
 
-/* ============================= */
-/* ===== COACH IMAGE FIX ====== */
-/* ============================= */
+/* =============================== */
+/* ===== FINAL COACH IMAGE ====== */
+/* =============================== */
 
 .coach-wrapper{
     width:380px;
     height:380px;
-    border-radius:50%;
-    border:10px solid #20B15A; /* Clean premium green */
-    padding:16px; /* Real inner gap */
     margin:80px auto 20px;
-    box-sizing:border-box;
+    border-radius:50%;
+    border:12px solid #1DB954; /* Clean strong green */
+    overflow:hidden; /* No white ring */
 }
 
 .coach-wrapper img{
     width:100%;
     height:100%;
-    border-radius:50%;
     object-fit:cover;
-    object-position:center 62%; /* Push slightly down */
-    display:block;
+    object-position:center 65%; /* Push head down slightly */
+    transform:scale(0.92); /* Creates real inner gap */
+    border-radius:50%;
 }
 
 /* VISIT SECTION */
@@ -120,9 +119,9 @@ video{
 .contact-card{
     display:flex;
     align-items:center;
-    gap:22px;
+    gap:20px;
     background:white;
-    padding:28px;
+    padding:26px;
     border-radius:20px;
     box-shadow:0 15px 40px rgba(0,0,0,0.06);
     text-align:left;
@@ -134,16 +133,20 @@ video{
     box-shadow:0 25px 55px rgba(0,0,0,0.10);
 }
 
+/* ===== UNIFORM ICON FIX ===== */
+
 .icon-box{
-    width:60px;
-    height:60px;
-    border-radius:18px;
-    background:#eefaf3;
+    width:52px;
+    height:52px;
+    min-width:52px;
+    min-height:52px;
+    border-radius:14px;
+    background:#eaf7ef;
     display:flex;
     align-items:center;
     justify-content:center;
-    color:#20B15A;
-    font-size:24px;
+    color:#1DB954;
+    font-size:20px;
 }
 
 .contact-card h3{
@@ -158,7 +161,7 @@ video{
 }
 
 .contact-card a{
-    color:#20B15A;
+    color:#1DB954;
     text-decoration:none;
     font-weight:600;
 }
