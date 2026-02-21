@@ -5,7 +5,6 @@
 <title>Sportzilla Football Academy</title>
 
 <style>
-
 body{
     margin:0;
     font-family: Arial, sans-serif;
@@ -14,38 +13,44 @@ body{
 
 /* HERO SECTION */
 header{
-    background:url('IMG-20260221-WA0015.jpg') center center no-repeat;
-    background-size:cover;
+    background:url('IMG-20260221-WA0015.jpg') center/cover no-repeat;
     color:white;
     text-align:center;
     padding:120px 20px;
     position:relative;
 }
 
-header::after{
+header::before{
     content:"";
     position:absolute;
     top:0;
     left:0;
-    width:100%;
-    height:100%;
+    right:0;
+    bottom:0;
     background:rgba(0,0,0,0.6);
 }
 
-header .content{
+header *{
     position:relative;
-    z-index:2;
+    z-index:1;
 }
 
-/* LOGO */
 .logo{
-    width:140px;
-    height:auto;
+    width:120px;
     margin-bottom:20px;
-    border-radius:50%;
 }
 
-/* BUTTON */
+header h1{
+    font-size:42px;
+    margin:10px 0;
+}
+
+.slogan{
+    font-size:26px;
+    font-weight:bold;
+    letter-spacing:1px;
+}
+
 .btn{
     background:#00c853;
     padding:12px 25px;
@@ -53,7 +58,7 @@ header .content{
     text-decoration:none;
     border-radius:5px;
     display:inline-block;
-    margin-top:15px;
+    margin-top:20px;
 }
 
 /* SECTION */
@@ -62,48 +67,66 @@ section{
     text-align:center;
 }
 
-/* PROGRAMS */
-.programs{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
+h2{
+    font-size:32px;
+    margin-bottom:20px;
 }
 
+/* PROGRAMS */
 .programs div{
     background:white;
     padding:20px;
-    margin:10px;
+    margin:10px auto;
     border-radius:10px;
     box-shadow:0 4px 8px rgba(0,0,0,0.1);
-    width:250px;
+    max-width:350px;
 }
 
 /* GALLERY */
-.gallery{
+.gallery-container{
     display:flex;
     flex-wrap:wrap;
     justify-content:center;
+    gap:15px;
 }
 
-.gallery img{
+.gallery-container img{
     width:300px;
-    margin:10px;
+    height:200px;
+    object-fit:cover;
     border-radius:10px;
 }
 
-/* COACH */
-.coach img{
-    width:220px;
-    height:auto;
-    margin-top:20px;
-    border-radius:15px;
+/* COACH SECTION */
+.coach-section{
+    text-align:center;
+}
+
+.coach-photo{
+    width:200px;
+    height:200px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid #00c853;
+    box-shadow:0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* CONTACT */
+.contact-buttons a{
+    display:inline-block;
+    margin:10px;
+    padding:10px 20px;
+    background:#00c853;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
 }
 
 /* FOOTER */
 footer{
     background:black;
     color:white;
-    padding:15px;
+    padding:20px;
     text-align:center;
 }
 
@@ -114,20 +137,19 @@ footer{
 
 <!-- HERO -->
 <header>
-    <div class="content">
-        <img src="IMG-20260221-WA0017.jpg" class="logo">
-        <h1>Sportzilla Football Academy</h1>
-        <p>Train Hard. Play Smart. Win Big.</p>
-        <a href="tel:+919611958268" class="btn">Call Now</a>
-    </div>
+    <img src="IMG-20260221-WA0017.jpg" class="logo">
+    <h1>Sportzilla Football Academy</h1>
+    <p class="slogan">Train Hard. Play Smart. Win Big.</p>
+    <a href="#contact" class="btn">Enroll Now</a>
 </header>
 
 <!-- ABOUT -->
 <section>
     <h2>About Us</h2>
     <p>
-    Based in Kondhwe Dhawade, Pune, Maharashtra, Sportzilla Football Academy provides professional football coaching for kids and adults.
-    Established in 2021, we focus on skill development, match exposure and competitive growth.
+    Based in Pune, Sportzilla Football Academy provides professional football coaching 
+    for kids and adults. Established in 2021, we focus on skill development, 
+    match exposure and competitive growth.
     </p>
 </section>
 
@@ -142,42 +164,53 @@ footer{
     </div>
 </section>
 
-<!-- GALLERY -->
-<section class="gallery">
-    <h2>Gallery</h2>
-
-    <img src="IMG-20260221-WA0003.jpg">
-    <img src="IMG-20260221-WA0004.jpg">
-    <img src="IMG-20260221-WA0005.jpg">
-    <img src="IMG-20260221-WA0006.jpg">
-    <img src="IMG-20260221-WA0007.jpg">
-    <img src="IMG-20260221-WA0008.jpg">
-    <img src="IMG-20260221-WA0009.jpg">
-    <img src="IMG-20260221-WA0010.jpg">
-    <img src="IMG-20260221-WA0011.jpg">
-    <img src="IMG-20260221-WA0012.jpg">
-
+<!-- ACHIEVEMENTS -->
+<section>
+    <h2>Our Achievements 🏆</h2>
+    <p>Multiple Tournament Wins | District Level Champions | 50+ Trophies Won</p>
 </section>
 
-<!-- COACH -->
-<section class="coach">
+<!-- GALLERY -->
+<section>
+    <h2>Gallery</h2>
+    <div class="gallery-container">
+        <img src="IMG-20260221-WA0003.jpg">
+        <img src="IMG-20260221-WA0004.jpg">
+        <img src="IMG-20260221-WA0005.jpg">
+        <img src="IMG-20260221-WA0006.jpg">
+        <img src="IMG-20260221-WA0007.jpg">
+        <img src="IMG-20260221-WA0008.jpg">
+        <img src="IMG-20260221-WA0009.jpg">
+        <img src="IMG-20260221-WA0010.jpg">
+        <img src="IMG-20260221-WA0011.jpg">
+        <img src="IMG-20260221-WA0012.jpg">
+    </div>
+</section>
+
+<!-- HEAD COACH -->
+<section>
     <h2>Head Coach</h2>
 
-    <img src="IMG_20250906_153458.jpg">
-
-    <h3>Sudhir Kumar Dhusia</h3>
-    <p>Founder & Head Coach</p>
-    <p>📞 +91 96119 58268</p>
+    <div class="coach-section">
+        <img src="IMG-20260222-WA0000.jpg" alt="Head Coach" class="coach-photo">
+        <h3>Sudhir Kumar Dhusia</h3>
+        <p>Founder & Head Coach</p>
+    </div>
 </section>
 
 <!-- CONTACT -->
-<section>
+<section id="contact">
     <h2>Contact Us</h2>
-    <p>📍 Kondhwe Dhawade, Pune, Maharashtra</p>
-    <p>📞 +91 96119 58268</p>
-    <a href="https://wa.me/919611958268" class="btn">Chat on WhatsApp</a>
+    <p>Kondhwe Dhawade, Pune, Maharashtra</p>
+    <p>Phone: +91 96119 58268</p>
+
+    <div class="contact-buttons">
+        <a href="tel:+919611958268">Call Now</a>
+        <a href="https://wa.me/919611958268" target="_blank">WhatsApp</a>
+    </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
     © 2026 Sportzilla Football Academy | Est. 2021
 </footer>
