@@ -4,7 +4,6 @@
 <title>Sportzilla Football Academy</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Clean Line Icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
@@ -82,21 +81,27 @@ video{
     border-radius:16px;
 }
 
-/* COACH SECTION */
-.coach-section{
-    padding-top:120px;
+/* ============================= */
+/* ===== COACH IMAGE FIX ====== */
+/* ============================= */
+
+.coach-wrapper{
+    width:380px;
+    height:380px;
+    border-radius:50%;
+    border:10px solid #20B15A; /* Clean premium green */
+    padding:16px; /* Real inner gap */
+    margin:80px auto 20px;
+    box-sizing:border-box;
 }
 
-/* CLEAN CIRCLE BORDER FIX */
-.coach-img{
-    width:360px;
-    height:360px;
+.coach-wrapper img{
+    width:100%;
+    height:100%;
     border-radius:50%;
     object-fit:cover;
-    object-position:center 58%; /* push slightly down */
-    border:10px solid #1DB954; /* refined premium green */
-    box-shadow:0 0 0 8px #ffffff; /* invisible internal gap trick */
-    margin-top:70px;
+    object-position:center 62%; /* Push slightly down */
+    display:block;
 }
 
 /* VISIT SECTION */
@@ -137,7 +142,7 @@ video{
     display:flex;
     align-items:center;
     justify-content:center;
-    color:#1DB954;
+    color:#20B15A;
     font-size:24px;
 }
 
@@ -153,7 +158,7 @@ video{
 }
 
 .contact-card a{
-    color:#1DB954;
+    color:#20B15A;
     text-decoration:none;
     font-weight:600;
 }
@@ -177,7 +182,7 @@ footer{
 }
 
 @media(max-width:768px){
-    .coach-img{
+    .coach-wrapper{
         width:280px;
         height:280px;
     }
@@ -231,9 +236,13 @@ match exposure and competitive growth.
 </section>
 
 <!-- COACH -->
-<section class="coach-section">
+<section>
 <h2>Head Coach</h2>
-<img src="IMG-20260222-WA0000.jpg" class="coach-img">
+
+<div class="coach-wrapper">
+    <img src="IMG-20260222-WA0000.jpg">
+</div>
+
 <h3>Sudhir Kumar Dhusia</h3>
 <p>Founder & Head Coach</p>
 </section>
