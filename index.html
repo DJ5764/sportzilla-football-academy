@@ -4,6 +4,9 @@
 <title>Sportzilla Football Academy</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<!-- Premium Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <style>
 body{
     margin:0;
@@ -85,14 +88,24 @@ video{
     padding-top:120px;
 }
 
+/* OUTER BORDER WITH GAP */
+.coach-wrapper{
+    width:360px;
+    height:360px;
+    margin:70px auto 0;
+    border-radius:50%;
+    border:8px solid #16a34a; /* premium green */
+    padding:18px; /* REAL GAP */
+    box-sizing:border-box;
+}
+
+/* IMAGE */
 .coach-img{
-    width:340px;
-    height:340px;
+    width:100%;
+    height:100%;
     border-radius:50%;
     object-fit:cover;
-    object-position:center 48%; /* PUSHED DOWN */
-    border:7px solid #18a558; /* exact fresh green tone */
-    margin-top:70px;
+    object-position:center 55%; /* PUSH DOWN */
 }
 
 /* VISIT SECTION */
@@ -126,15 +139,15 @@ video{
 }
 
 .icon-box{
-    width:55px;
-    height:55px;
-    border-radius:14px;
-    background:#18a558;
+    width:60px;
+    height:60px;
+    border-radius:16px;
+    background:#16a34a;
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:22px;
     color:white;
+    font-size:22px;
 }
 
 .contact-card h3{
@@ -148,7 +161,7 @@ video{
 }
 
 .contact-card a{
-    color:#18a558;
+    color:#16a34a;
     text-decoration:none;
     font-weight:600;
 }
@@ -172,9 +185,10 @@ footer{
 }
 
 @media(max-width:768px){
-    .coach-img{
-        width:260px;
-        height:260px;
+    .coach-wrapper{
+        width:280px;
+        height:280px;
+        padding:14px;
     }
 }
 </style>
@@ -228,19 +242,23 @@ match exposure and competitive growth.
 <!-- COACH -->
 <section class="coach-section">
 <h2>Head Coach</h2>
-<img src="IMG-20260222-WA0000.jpg" class="coach-img">
+
+<div class="coach-wrapper">
+    <img src="IMG-20260222-WA0000.jpg" class="coach-img">
+</div>
+
 <h3>Sudhir Kumar Dhusia</h3>
 <p>Founder & Head Coach</p>
 </section>
 
-<!-- VISIT / CONTACT -->
+<!-- VISIT -->
 <section class="visit-section">
 <h2>Visit Us</h2>
 
 <div class="contact-grid">
 
 <div class="contact-card">
-<div class="icon-box">📍</div>
+<div class="icon-box"><i class="fas fa-location-dot"></i></div>
 <div>
 <h3>Visit Us</h3>
 <p>Kondhwe Dhawade, Pune, Maharashtra</p>
@@ -251,7 +269,7 @@ Get Directions →
 </div>
 
 <div class="contact-card">
-<div class="icon-box">📞</div>
+<div class="icon-box"><i class="fas fa-phone"></i></div>
 <div>
 <h3>Call Us</h3>
 <p>Available 7 Days a Week</p>
@@ -260,7 +278,7 @@ Get Directions →
 </div>
 
 <div class="contact-card">
-<div class="icon-box">💬</div>
+<div class="icon-box"><i class="fab fa-whatsapp"></i></div>
 <div>
 <h3>WhatsApp</h3>
 <p>Chat with us for admissions & details</p>
