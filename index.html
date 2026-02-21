@@ -5,18 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-
 body{
     margin:0;
-    font-family: 'Segoe UI', sans-serif;
-    background:#0f0f0f;
-    color:white;
+    font-family:'Segoe UI',sans-serif;
+    background:#ffffff;
+    color:#222;
 }
 
 /* HERO */
 .hero{
     position:relative;
-    height:100vh;
+    height:95vh;
     background:url('IMG-20260221-WA0015.jpg') center center/cover no-repeat;
     display:flex;
     justify-content:center;
@@ -29,35 +28,34 @@ body{
     position:absolute;
     top:0;left:0;
     width:100%;height:100%;
-    background:linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.9));
+    background:rgba(0,0,0,0.25); /* very light overlay */
 }
 
 .hero-content{
     position:relative;
     z-index:2;
+    color:white;
 }
 
 .logo{
-    width:150px;
+    width:140px;
     border-radius:50%;
-    box-shadow:0 0 25px rgba(0,255,100,0.6);
     margin-bottom:20px;
 }
 
 .hero h1{
-    font-size:42px;
-    letter-spacing:1px;
+    font-size:40px;
+    margin:10px 0;
 }
 
 .hero p{
     font-size:20px;
-    color:#00ff88;
-    margin-top:10px;
+    font-weight:500;
 }
 
 /* SECTION */
 section{
-    padding:80px 20px;
+    padding:70px 20px;
     text-align:center;
 }
 
@@ -72,19 +70,14 @@ section{
     width:100%;
     height:auto;
     border-radius:12px;
-    transition:0.4s;
-}
-
-.gallery img:hover{
-    transform:scale(1.05);
 }
 
 /* VIDEO */
 video{
     width:100%;
     max-width:800px;
-    border-radius:12px;
     margin-top:30px;
+    border-radius:12px;
 }
 
 /* COACH */
@@ -94,37 +87,47 @@ video{
     border-radius:50%;
     object-fit:cover;
     object-position:center 20%;
-    border:5px solid #00ff88;
-    box-shadow:0 0 25px rgba(0,255,100,0.5);
+    border:4px solid #1e9e57;
 }
 
 /* CONTACT */
 .contact-box{
-    background:#111;
+    background:#f7f7f7;
     padding:40px;
-    border-radius:15px;
+    border-radius:12px;
     max-width:600px;
     margin:auto;
-    box-shadow:0 0 20px rgba(0,255,100,0.2);
 }
 
 .btn{
     display:inline-block;
     padding:12px 25px;
-    background:#00ff88;
-    color:black;
+    background:#1e9e57;
+    color:white;
     text-decoration:none;
     border-radius:30px;
     margin:10px;
     font-weight:bold;
 }
 
+/* MAP */
+.map-container{
+    margin-top:40px;
+}
+
+iframe{
+    width:100%;
+    height:350px;
+    border:0;
+    border-radius:12px;
+}
+
 footer{
-    background:black;
+    background:#111;
+    color:white;
     padding:20px;
     text-align:center;
     font-size:14px;
-    color:#888;
 }
 
 @media(max-width:768px){
@@ -132,7 +135,6 @@ footer{
         font-size:28px;
     }
 }
-
 </style>
 </head>
 
@@ -186,17 +188,24 @@ match exposure and competitive growth.
 </section>
 
 <section>
-<h2>Location</h2>
-<p>Kondhwe Dhawade, Pune, Maharashtra</p>
-</section>
+<h2>Visit Us</h2>
 
-<section>
-<h2>Contact Us</h2>
 <div class="contact-box">
-<p>Phone: +91 96119 58268</p>
+<p><strong>Location:</strong> Kondhwe Dhawade, Pune, Maharashtra</p>
+<p><strong>Phone:</strong> +91 96119 58268</p>
+
 <a href="tel:+919611958268" class="btn">Call Now</a>
 <a href="https://wa.me/919611958268" class="btn">WhatsApp</a>
+<a href="https://www.google.com/maps/search/?api=1&query=Sportzilla+Football+Academy+Pune" 
+   target="_blank" class="btn">Get Directions</a>
 </div>
+
+<div class="map-container">
+<iframe 
+src="https://www.google.com/maps?q=Sportzilla%20Football%20Academy%20Pune&output=embed">
+</iframe>
+</div>
+
 </section>
 
 <footer>
