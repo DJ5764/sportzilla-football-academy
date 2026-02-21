@@ -12,7 +12,7 @@ body{
     color:#222;
 }
 
-/* HERO SECTION */
+/* HERO */
 .hero{
     position:relative;
     height:95vh;
@@ -26,9 +26,9 @@ body{
 .hero::after{
     content:"";
     position:absolute;
-    top:0;left:0;
-    width:100%;height:100%;
-    background:rgba(0,0,0,0.18);
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.15);
 }
 
 .hero-content{
@@ -44,7 +44,7 @@ body{
 }
 
 .hero h1{
-    font-size:42px;
+    font-size:40px;
     margin:10px 0;
 }
 
@@ -53,9 +53,9 @@ body{
     font-weight:500;
 }
 
-/* GENERAL SECTION */
+/* SECTION */
 section{
-    padding:90px 20px;
+    padding:100px 20px;
     text-align:center;
 }
 
@@ -69,7 +69,7 @@ section{
 .gallery img{
     width:100%;
     height:auto;
-    border-radius:14px;
+    border-radius:16px;
 }
 
 /* VIDEO */
@@ -77,77 +77,89 @@ video{
     width:100%;
     max-width:850px;
     margin-top:40px;
-    border-radius:14px;
+    border-radius:16px;
 }
 
-/* COACH SECTION */
+/* COACH */
 .coach-section{
     padding-top:120px;
 }
 
 .coach-img{
-    width:330px;
-    height:330px;
+    width:340px;
+    height:340px;
     border-radius:50%;
     object-fit:cover;
-    object-position:center 40%;
-    border:6px solid #1e9e57;
-    margin-top:60px;
+    object-position:center 48%; /* PUSHED DOWN */
+    border:7px solid #18a558; /* exact fresh green tone */
+    margin-top:70px;
 }
 
 /* VISIT SECTION */
 .visit-section{
-    background:#f9fafb;
+    background:#f8fafc;
 }
 
-.visit-card{
-    background:white;
-    padding:70px 35px;
-    border-radius:24px;
-    max-width:760px;
+.contact-grid{
+    max-width:800px;
     margin:auto;
-    box-shadow:0 25px 60px rgba(0,0,0,0.08);
-}
-
-.visit-card p{
-    font-size:18px;
-    margin:15px 0;
-}
-
-/* PREMIUM BUTTONS */
-.btn{
-    display:inline-flex;
-    align-items:center;
-    gap:12px;
-    padding:16px 28px;
-    background:white;
-    color:#1e9e57;
-    text-decoration:none;
-    border-radius:14px;
-    margin:12px;
-    font-weight:600;
-    font-size:16px;
-    border:2px solid #1e9e57;
-    transition:all 0.3s ease;
-}
-
-.btn:hover{
-    background:#1e9e57;
-    color:white;
-    transform:translateY(-3px);
-    box-shadow:0 10px 25px rgba(0,0,0,0.15);
-}
-
-/* MAP */
-.map-container{
+    display:grid;
+    gap:30px;
     margin-top:60px;
 }
 
+.contact-card{
+    display:flex;
+    align-items:flex-start;
+    gap:20px;
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.07);
+    text-align:left;
+    transition:0.3s ease;
+}
+
+.contact-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 25px 50px rgba(0,0,0,0.12);
+}
+
+.icon-box{
+    width:55px;
+    height:55px;
+    border-radius:14px;
+    background:#18a558;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:22px;
+    color:white;
+}
+
+.contact-card h3{
+    margin:0 0 5px;
+}
+
+.contact-card p{
+    margin:5px 0;
+    font-size:15px;
+    color:#555;
+}
+
+.contact-card a{
+    color:#18a558;
+    text-decoration:none;
+    font-weight:600;
+}
+
+/* MAP */
 iframe{
     width:100%;
     height:380px;
     border:0;
     border-radius:20px;
+    margin-top:60px;
 }
 
 /* FOOTER */
@@ -160,12 +172,9 @@ footer{
 }
 
 @media(max-width:768px){
-    .hero h1{
-        font-size:28px;
-    }
     .coach-img{
-        width:250px;
-        height:250px;
+        width:260px;
+        height:260px;
     }
 }
 </style>
@@ -186,7 +195,7 @@ footer{
 <section>
 <h2>About Us</h2>
 <p>
-Sportzilla Football Academy, based in Pune, provides professional football coaching 
+Sportzilla Football Academy in Pune provides professional football coaching 
 for kids and adults. Established in 2021, we focus on skill development, 
 match exposure and competitive growth.
 </p>
@@ -224,33 +233,46 @@ match exposure and competitive growth.
 <p>Founder & Head Coach</p>
 </section>
 
-<!-- VISIT US -->
+<!-- VISIT / CONTACT -->
 <section class="visit-section">
 <h2>Visit Us</h2>
 
-<div class="visit-card">
-<p><strong>📍 Location:</strong> Kondhwe Dhawade, Pune, Maharashtra</p>
-<p><strong>📞 Phone:</strong> +91 96119 58268</p>
+<div class="contact-grid">
 
-<a href="tel:+919611958268" class="btn">
-    📞 <span>Call Now</span>
-</a>
-
-<a href="https://wa.me/919611958268" class="btn">
-    💬 <span>WhatsApp</span>
-</a>
-
-<a href="https://www.google.com/maps/search/?api=1&query=Sportzilla+Football+Academy+Pune"
-   target="_blank" class="btn">
-    📍 <span>Get Directions</span>
+<div class="contact-card">
+<div class="icon-box">📍</div>
+<div>
+<h3>Visit Us</h3>
+<p>Kondhwe Dhawade, Pune, Maharashtra</p>
+<a href="https://www.google.com/maps/search/?api=1&query=Sportzilla+Football+Academy+Pune" target="_blank">
+Get Directions →
 </a>
 </div>
+</div>
 
-<div class="map-container">
+<div class="contact-card">
+<div class="icon-box">📞</div>
+<div>
+<h3>Call Us</h3>
+<p>Available 7 Days a Week</p>
+<a href="tel:+919611958268">+91 96119 58268</a>
+</div>
+</div>
+
+<div class="contact-card">
+<div class="icon-box">💬</div>
+<div>
+<h3>WhatsApp</h3>
+<p>Chat with us for admissions & details</p>
+<a href="https://wa.me/919611958268" target="_blank">Start Chat →</a>
+</div>
+</div>
+
+</div>
+
 <iframe 
 src="https://www.google.com/maps?q=Sportzilla%20Football%20Academy%20Pune&output=embed">
 </iframe>
-</div>
 
 </section>
 
